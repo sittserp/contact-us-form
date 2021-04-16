@@ -15,7 +15,7 @@ const ContactForm = () => {
   const sendEmail = event => {
     event.preventDefault();
     axios
-      .post('https://contact-f.herokuapp.com/', { ...state })
+      .post('https://contact-f.herokuapp.com/send', { ...state })
       .then(response => {
         setResult(response.data);
         setState({ 
